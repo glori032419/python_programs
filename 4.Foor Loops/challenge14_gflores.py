@@ -1,4 +1,5 @@
 from math import sqrt
+import math
 print("\t\tWelcome to the Averige Calculator App.")
 digits=int(input("How many digits of the Fibonacci Sequence would you like to compute: "))
 
@@ -17,3 +18,17 @@ for digits in range(0,digits):
     print(Fibonaci(digits))
 
 print("The corresponding Golden Ratio values are: ")
+
+def fibonacci_golderatio(target):
+    if target <2:
+        return target
+    if target >71:
+        return fibonacci_golderatio(target)
+
+    sqrt5=math.sqrt(5)
+    golden_ratio=(1 + sqrt5)/2
+
+    return math.floor(math.pow(golden_ratio,target)/sqrt5)
+
+for digits in range(0,digits):
+    print(fibonacci_golderatio(digits))
